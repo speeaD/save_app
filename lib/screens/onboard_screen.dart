@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:save_app/app_router.gr.dart';
 
 import '../styles/text_spans.dart';
 import '../styles/colors.dart';
@@ -39,7 +40,10 @@ class _OnboardScreenState extends State<OnboardScreen> {
                 fontSize: 15,
               ),
               const SizedBox(height: 50),
-              const AppButton(text: 'Create Account'),
+              AppButton(
+                text: 'Create Account',
+                onTap: () => context.router.push(const RegisterRoute()),
+              ),
               const SizedBox(height: 10),
               const AppButton(
                 text: 'Login',
