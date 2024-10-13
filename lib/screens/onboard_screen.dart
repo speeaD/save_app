@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../styles/text_spans.dart';
 import '../styles/colors.dart';
 import '../widgets/buttons.dart';
 
@@ -27,19 +28,15 @@ class _OnboardScreenState extends State<OnboardScreen> {
                 "assets/images/onboard_image.png",
                 height: size.height * 0.55,
               ),
-              Text(
-                "Simplified Pool Savings",
-                style: TextStyle(
-                  fontSize: MediaQuery.textScalerOf(context).scale(18),
-                  fontWeight: FontWeight.bold,
-                ),
+              const AppText(
+                text: "Simplified Pool Savings",
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
-              Text(
-                "With Fusion, you can contribute, save and manage your funds with savings group",
-                style: TextStyle(
-                  fontSize: MediaQuery.textScalerOf(context).scale(15),
-                ),
-                textAlign: TextAlign.center,
+              const AppText(
+                text:
+                    "With Fusion, you can contribute, save and manage your funds with savings group",
+                fontSize: 15,
               ),
               const SizedBox(height: 50),
               const AppButton(text: 'Create Account'),

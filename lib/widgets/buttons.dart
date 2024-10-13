@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:save_app/styles/text_spans.dart';
 
 import '../styles/colors.dart';
 
@@ -32,14 +33,12 @@ class AppButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Center(
-          child: Text(
-            text,
-            style: TextStyle(
-              color: textColor ?? Colors.white,
-              fontSize: MediaQuery.textScalerOf(context).scale(14),
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1.05,
-            ),
+          child: AppText(
+            text: text,
+            color: textColor ?? Colors.white,
+            fontSize: 14,
+            letterSpacing: 1.05,
+            fontWeight: FontWeight.w700,
           ),
         ),
       ),
